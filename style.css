@@ -1,0 +1,115 @@
+@import url("satoshi.css");
+
+body {
+    font-family: 'Satoshi-Regular';
+    margin: 0;
+    padding: 0;
+    background-color: #D8D2C2;
+}
+
+h1 {
+    text-align: center;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #B17457;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.story-content, .team-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.story-content {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.story-text, .team-text {
+    width: calc(55% - 30px); /* Adjust width for text */
+    padding: 20px;
+}
+
+.story-image, .team-image {
+    width: calc(40% - 10px); /* Adjust width for images */
+    height: auto;
+    border-radius: 50px;
+    object-fit: cover;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.story-image:hover, .team-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 5px 10px 15px rgba(74, 73, 71, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .story-text, .team-text, .story-image, .team-image {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+    .story-image, .team-image {
+        width: 50%;
+        margin: 0 auto 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    p {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .story-image, .team-image {
+        width: 70%;
+    }
+}
+
+.about-section h2 {
+    text-align: center;
+}
+
+.about-section p {
+    text-align: left;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #ff7f50;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
